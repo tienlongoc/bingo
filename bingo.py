@@ -29,7 +29,7 @@ def draw_next_ball(game_name: str):
     sprint(get_ascii_art(balls[chosen_index]))
     sprint(f'The chosen ball is {balls[chosen_index]}!')
     del balls[chosen_index]
-    sprint(f'The remaining balls are:')
+    sprint(f'There are {str(len(balls))} remaining balls:')
     sprint(' '.join(balls))
     with open(game_name, 'w') as f:
         f.write(' '.join(balls))
